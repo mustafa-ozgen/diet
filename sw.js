@@ -1,96 +1,42 @@
-/* ========================================
-   DIYET PROGRAMI - Service Worker
-   PWA offline destek ve önbellek yönetimi
-   ======================================== */
+/* Diyet Programi - Service Worker (offline destek) */
+const CACHE = 'diyet-v1';
+const ASSETS = ['./', './index.html', './style.css', './script.js', './manifest.json'];
 
-const CACHE_NAME = 'diyet-programi-v1';
-const STATIC_ASSETS = [
-    '/',
-    '/index.html',
-    '/style.css',
-    '/script.js',
-    '/manifest.json'
-];
-
-const JSON_FILES = [
-    '/diet_jsons/dietprogram1.json',
-    '/diet_jsons/dietprogram2.json',
-    '/diet_jsons/dietprogram3_fatburn.json'
-];
-
-// Install event - statik varlıkları önbelleğe al
-self.addEventListener('install', (event) => {
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then((cache) => {
-                return cache.addAll(STATIC_ASSETS);
-            })
-            .then(() => {
-                return self.skipWaiting();
-            })
-    );
+self.addEventListener('install', (e) => {
+    e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
 });
 
-// Activate event - eski önbellekleri temizle
-self.addEventListener('activate', (event) => {
-    event.waitUntil(
+self.addEventListener('activate', (e) => {
+    e.waitUntil(
         caches.keys()
-            .then((cacheNames) => {
-                return Promise.all(
-                    cacheNames.filter((name) => name !== CACHE_NAME)
-                        .map((name) => caches.delete(name))
-                );
-            })
-            .then(() => {
-                return self.clients.claim();
-            })
+            .then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k))))
+            .then(() => self.clients.claim())
     );
 });
 
-// Fetch event - ağ isteklerini yakala ve önbellekten servis et
-self.addEventListener('fetch', (event) => {
-    const url = new URL(event.request.url);
-
-    // JSON dosyaları için: önce ağdan, yoksa önbellekten
-    if (JSON_FILES.includes(url.pathname)) {
-        event.respondWith(
-            fetch(event.request)
-                .then((response) => {
-                    // Başarılı yanıtı önbelleğe al
-                    const responseClone = response.clone();
-                    caches.open(CACHE_NAME)
-                        .then((cache) => {
-                            cache.put(event.request, responseClone);
-                        });
-                    return response;
+self.addEventListener('fetch', (e) => {
+    const url = new URL(e.request.url);
+    if (url.pathname.endsWith('.json')) {
+        e.respondWith(
+            fetch(e.request)
+                .then((res) => {
+                    const copy = res.clone();
+                    caches.open(CACHE).then((c) => c.put(e.request, copy));
+                    return res;
                 })
-                .catch(() => {
-                    // Ağ hatası durumunda önbellekten dene
-                    return caches.match(event.request);
-                })
+                .catch(() => caches.match(e.request))
         );
         return;
     }
-
-    // Diğer varlıklar için: önce önbellekten, sonra ağdan
-    event.respondWith(
-        caches.match(event.request)
-            .then((cachedResponse) => {
-                if (cachedResponse) {
-                    return cachedResponse;
+    e.respondWith(
+        caches.match(e.request).then(
+            (hit) => hit || fetch(e.request).then((res) => {
+                if (res.ok) {
+                    const copy = res.clone();
+                    caches.open(CACHE).then((c) => c.put(e.request, copy));
                 }
-                return fetch(event.request)
-                    .then((response) => {
-                        // Yeni varlıkları önbelleğe al (HTML, CSS, JS)
-                        if (response.ok && response.type === 'basic') {
-                            const responseClone = response.clone();
-                            caches.open(CACHE_NAME)
-                                .then((cache) => {
-                                    cache.put(event.request, responseClone);
-                                });
-                        }
-                        return response;
-                    });
+                return res;
             })
+        )
     );
 });

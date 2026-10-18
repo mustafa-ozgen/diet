@@ -2,48 +2,43 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2d5a27">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Diyet Programı">
     <meta name="description" content="Minimalist ve modern diyet programı takip uygulaması">
     <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192x192.png">
+    <link rel="apple-touch-icon" href="icon-192x192.png">
     <link rel="stylesheet" href="style.css">
     <title>Diyet Programı</title>
 </head>
 <body>
     <div class="app-container">
         <header class="app-header">
-            <div class="header-content">
-                <h1>🥗 Diyet Programı</h1>
-                <div class="program-selector">
-                    <label for="programSelect">Program Seçin:</label>
-                    <select id="programSelect">
-                        <option value="dietprogram1">Diyet Programı 1</option>
-                        <option value="dietprogram2">Diyet Programı 2</option>
-                        <option value="dietprogram3_fatburn">Fat Burn List</option>
-                    </select>
-                    <button id="refreshBtn" class="refresh-btn" title="Yenile">⟳</button>
-                </div>
+            <h1>Diyet Programı</h1>
+            <div class="program-selector">
+                <label for="programSelect">Program</label>
+                <select id="programSelect">
+                    <option value="dietprogram1">Diyet Programı 1</option>
+                    <option value="dietprogram2">Diyet Programı 2</option>
+                    <option value="dietprogram3_fatburn">Fat Burn List</option>
+                </select>
+                <button id="refreshBtn" class="refresh-btn" title="Yenile">&#10227;</button>
             </div>
         </header>
-
         <main class="main-content">
             <div class="diet-container" id="dietContainer">
-                <!-- Diet content will be injected here -->
                 <div class="loading">Yükleniyor...</div>
             </div>
         </main>
-
         <footer class="app-footer">
-            <div class="footer-content">
-                <span id="lastUpdated">Güncelleniyor...</span>
-                <span class="pwa-badge">📱 PWA Hazır</span>
-            </div>
+            <span id="lastUpdated">Güncelleniyor...</span>
+            <span class="pwa-badge">PWA Hazır</span>
         </footer>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
