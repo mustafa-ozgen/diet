@@ -1,0 +1,111 @@
+{
+  "programs": [
+    {
+      "name": "Fat Burn List",
+      "meals": [
+        {
+          "name": "Sabah Kahvaltısı",
+          "time_before": "",
+          "options": [
+            {
+              "type": "Standart",
+              "content": [
+			    "3 te 1 oranında Ananas",
+				"Ananas Kürü"              
+              ],           
+			"notes": "Not: Ananas kabuklarını yıkadıktan sonra 1 litre su ile 1 taşım kaynatın. Ocağın altını kapattıktan sonra 1-2 poşet bitki çayı ekleyip soğumaya bırakın. Soğuduktan sonra süzüp 1 şişe maden suyu 2 yemek kaşığı sirke ve 1 yemek kaşığı chia tohumu ekleyin.<br/><br/>Not: Hipertansiyonunuz varsa ananas kürü biraz daha düşürülebilir. Endişe etmeyin."
+            }
+          ]
+        },
+        {
+          "name": "Kuşluk",
+          "time_before": "",
+          "options": [
+            {
+              "type": "Standart",
+              "content": [
+                "Bitki çayı"
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "name": "Öğle",
+          "time_before": "",
+          "options": [
+            {
+              "type": "Standart",
+              "content": [
+                "150 gram kırmızı et veya",
+				"180 gram tavuk/hindi eti veya",
+				"210 gram balık veya",
+				"160 gram ton balığı veya",
+				"100 gram (2 yemek kaşığı = 25 gram) lor peyniri veya",
+				"5 adet köfte (1 köfte = 30 gram = 1 yumurta büyüklüğü) veya",
+				"20-24 adet hamsi veya",
+				"3 adet derisiz tavuk baget veya",
+				"Sınırsız hindi/dana füme veya",
+				"16-20 küçük boy kuşbaşı et veya",
+				"5 yemek kaşığı kıyma veya",
+				"2 avuç ayası / 150 gram pirzola/bonfile/biftek veya",
+				"180 gram hellim peynir",
+				"Salata için 1 yemek kaşığı zeytinyağı ile patates, bezelye, havuç, mısır, nar ekşisi hariç, bol elma sirkeli.",
+				"+3 te 1 oranında Ananas"
+              ],
+              "notes": "Not: Ton balığı light tercih edin. Ayçiçek yağı kesinlikle olmasın, zeytinyağlı ise eğer yağını iyice süzün."
+            }
+          ]
+        },
+        {
+          "name": "İkindi",
+          "time_before": "",
+          "options": [
+            {
+              "type": "Standart",
+              "content": [
+				"1 tatlı kaşığı hindistan cevizi yağlı kahve",
+				"1 tatlı kaşığı tahin",
+				"2 tam ceviz içi",
+				"21 adet çiğ kuruyemiş",
+				"2-3 yemek kaşığı iç kabak çekirdeği",
+				"1 kare bitter çikolata"
+              ],
+              "notes": "Not: Protein süt veya quarkları isteğe bağlı meyveli olanlarını tercih edebilirsiniz."
+            }
+          ]
+        },
+        {
+          "name": "Akşam",
+          "time_before": "",
+          "options": [
+            {
+              "type": "Standart",
+              "content": [
+				"2 tam yumurta",
+				"1 tatlı kaşığı zeytinyağı veya tereyağı ile isterseniz bol sebzeli omlet veya",
+				"Bol yeşillikli yumurta salatası",
+				"(Mantar, ıspanak gibi dilediğiniz sebze veya menemen ya da sınırsız lor peyniri + sınırsız füme/pastırmalı protein omlet yapabilirsiniz)",
+				"3 te 1 oranında Ananas"
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "name": "Gece",
+          "time_before": "",
+          "options": [
+            {
+              "type": "Standart",
+              "content": [
+                "Bitki çayı"
+              ],
+              "notes": "Gün boyu su tüketilen su miktarı 3-3.5 litre olmalıdır."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

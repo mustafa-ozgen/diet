@@ -1,0 +1,159 @@
+{
+  "programs": [
+    {
+      "name": "Diyet Programı 1",
+      "meals": [
+        {
+          "name": "Sabah Kahvaltısı",
+          "time_before": "Öğünden önce 2 bardak ılık su içiniz",
+          "options": [
+            {
+              "type": "1. Alternatif",
+              "content": [
+                "2 adet tam yumurta + sınırsız yumurta akı ile omlet (dereout veya maydonoz eklenebilir)",
+                "2 yemek kaşığı sade yulaf ezmesi",
+				"Sınırsız Füme / Pastırma / Jambon",
+                "Sınırsız lor peyniri",
+                "1 tatlı kaşığı zeytinyağı",
+				"1 tatlı kaşığı çörekotu",
+                "10 zeytin",
+                "Kapya biber, salatalık, tere, roka, maydonoz, yeşillik vb."
+              ],
+              
+			"notes": "Omlet için: Patates, havuç, bezelye ve mısır hariç.<br/><br/>Yulafı geceden karıştırıp sabah pişirebilirsiniz.<br/><br/>Not: Yanmaz tavaya karışımı döküp kapağını örtün kısık ateşte pişirin ve ters düz yapın.<br/><br/>Not: Tüm malzemeleri karıştırdıktan sonra biraz bekletirseniz eğer yulaf sıvıyı çekip şişer ve börek kıvamını alır.<br/><br/>Not: Pratik olması için akşamdan tüm malzemeleri karıştırıp, sabah pratik pişirebilirsiniz.<br/><br/>Not: Yulafı robottan geçirip yulaf unu haline getirin. Toplu miktarda yulaf unu yapıp kavanozda muhafaza edebilirsiniz."
+            },
+            {
+              "type": "2. Alternatif",
+              "content": [
+                "3-4 yemek kaşığı yağsız dana kıyma/kavurma veya 9-12 dilim sucuk (90-120 gram)",
+                "1 adet tam yumurta + 4-5 yumurta akı",
+                "3-4 dilim hindi füme veya çemensiz pastırma",
+                "10 zeytin",
+                "Sınırsız tere, roka, taze nane, maydonoz, kapya, salatalık vs Yeşilçay"
+              ],
+              "notes": "Not: Belirtilen gramaja istediğiniz kadar domates, biber, soğan, kapya biber, mantar vs. ekleyebilirsiniz. Fazla pişirip ertesi sabah pratik ısıtabilirsiniz. Ekstra yağ eklemeyiniz.<br/><br/>Not: Omlet yapmak zorunda değilsiniz. Kıyma sote + Haşlanmış yumurta şeklinde tüketebilirsiniz."
+            },
+            {
+              "type": "3. Alternatif",
+              "content": [
+                "2 adet tam haşlanmış yumurta (omlet/menemen de olabilir)",
+                "1 tatlı kaşığı zeytinyağı",
+				"10 zeytin",
+                "İsteğe bağlı sınırsız füme veya pastırma tüketebilirsiniz",
+				"Kapya biber, tere, roka, dereotu, maydonoz, salatalık, yeşillik vs. ve bol baharat ile hazırlanmış yumurta salatası"
+              ],
+              "notes": ""
+            },
+            {
+              "type": "4. Alternatif",
+              "content": [
+                "2 dilim uno denge/siyez/tam buğday/çavdar/çok tahıllı ekmek arasına; 3 porsiyon beyaz beynir veya süzme peynir veya kaşar peynir (90 gram) ile hazırlanmış tost veya sandviç (yağsız)",
+				"1 adet Kabuklu kivi (150 gram) veya 1 dilim ananas veya Yarım Greyfurt"
+              ],
+              "notes": "Yanında veya içerisine ekleyerek bol yeşillik, söğüş, yağsız salata vs tüketebilirsiniz"
+            }
+          ]
+        },
+        {
+          "name": "Kuşluk",
+          "time_before": "Öğünden 10 dakika önce 2 bardak su içiniz",
+          "options": [
+            {
+              "type": "Standart",
+              "content": [
+                "Bitki çayı"
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "name": "Öğle",
+          "time_before": "Öğünden 10 dakika önce Elma sirkeli 1 bardak su içiniz",
+          "options": [
+            {
+              "type": "Standart",
+              "content": [
+                "1 bardak filtre kahve/yeşil kahve/türk kahvesi/çözünebilir kahve",
+                "1 tatlı kaşığı hindistan cevizi yağı + tarçın",
+                "1 tatlı kaşığı tahin",
+                "13 kavrulmamış yer fıstığı",
+                "3 yemek kaşığı kabak çekirdeği içi",
+                "3 tam ceviz içi",
+                "13 çiğ fındık, 13 çiğ badem, 13 çiğ kaju veya antep fıstığı",
+                "1 adet Kabuklu kivi (150 gram) veya 1 dilim ananas veya Yarım Greyfurt"
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "name": "İkindi",
+          "time_before": "Öğünden 10 dakika önce 2 bardak su içiniz",
+          "options": [
+            {
+              "type": "Seçmeli",
+              "content": [
+                "Aşağıdakilerden biri:",
+                "• 1 protein bar",
+                "• 2 Activia",
+                "• 1 quark",
+                "• Ayran",
+				"• Kefir",
+                "• 4 yemek kaşığı yoğurt"
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "name": "Akşam",
+          "time_before": "Öğünden 10 dakika önce Elma sirkeli 1 bardak su içiniz",
+          "options": [
+            {
+              "type": "Ana Protein (Birini Seçin)",
+              "content": [
+                "150g kırmızı et veya",
+                "180g hindi/tavuk veya",
+                "210g balık veya",
+                "160g ton balığı veya",
+                "100g (2 yemek kaşığı = 25 gram) lor peyniri veya",
+                "5 köfte veya",
+                "20-24 hamsi veya",
+                "2-3 derisiz tavuk baget veya",
+                "10-12 dilim (180 gram) hindi füme veya",
+                "16-20 küçük boy kuşbaşı et veya",
+                "5 yemek kaşığı kıyma veya",
+                "2 avuç ayası (150 gram) pirzola/bonfile/biftek veya",
+                "180 gram hellim peynir"
+              ],
+              "notes": "Not: 1 köfte = 30 gram = 1 yumurta büyüklüğü.<br/><br/>Not: Ton balığı light tercih edin. Ayçiçek yağlı olmasın, zeytinyağlı ise yağını iyice süzün"
+            },
+            {
+              "type": "Yanında",
+              "content": [
+                "Salata (1 yemek kaşığı zeytinyağı ile)",
+                "1 adet Kabuklu kivi (150 gram)"
+              ],
+              "notes": "Salatada patates, bezelye, havuç, mısır, nar ekşisi hariç."
+            }
+          ]
+        },
+        {
+          "name": "Gece",
+          "time_before": "Öğünden 10 dakika önce 2 bardak su içiniz",
+          "options": [
+            {
+              "type": "Standart",
+              "content": [
+                "Bitki çayı",
+				"Çorba"
+              ],
+              "notes": "Gün boyu tüketilen su miktarı 3-3.5 litre olmalı"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

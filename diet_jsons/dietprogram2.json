@@ -1,0 +1,114 @@
+{
+  "programs": [
+    {
+      "name": "Diyet Programı 2",
+      "meals": [
+        {
+          "name": "Sabah Kahvaltısı",
+          "time_before": "Öğünden önce 2 bardak ılık su içiniz",
+          "options": [
+            {
+              "type": "Standart",
+              "content": [
+			    "Yağ yakıcı kahve",
+                "1 bardak filtre kahve/yeşil kahve/türk kahvesi/çözünebilir kahve",
+                "1 tatlı kaşığı hindistan cevizi yağı, tarçın",
+				"30-35 adet çiğ kuruyemiş veya 3-4 tam ceviz içi",
+                "3 kuru kayısı veya",
+				"3 gün kurusu veya",
+				"3 kara erik veya",
+				"1 incir veya",
+				"2 hurma"
+              ],
+              
+			"notes": "Not: Kahvenin içerisine hindistan cevizi yağını pişirdikten sonra ekleyip karıştırın. Birlikte pişirmeyin.<br/><br/>Not: Kuru meyveleri kakao ya da tarçın dolu poşet ya da kutu içerisinde çalkalayarak tatlı yapabilirsiniz. İçerisine kuruyemişleri ekleyebilirsiniz."
+            }
+          ]
+        },
+        {
+          "name": "Kuşluk",
+          "time_before": "Öğünden 10 dakika önce 2 bardak su içiniz",
+          "options": [
+            {
+              "type": "Standart",
+              "content": [
+                "Bitki çayı"
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "name": "Öğle",
+          "time_before": "Öğünden 15 dakika önce 1 bardak su içiniz",
+          "options": [
+            {
+              "type": "Standart",
+              "content": [
+                "150 gram kırmızı et veya",
+				"180 gram tavuk/hindi eti veya",
+				"210 gram balık veya",
+				"160 gram ton balığı veya",
+				"5 adet köfte (1 köfte = 30 gram = 1 yumurta büyüklüğü)",
+				"Yanına Yeşil Salata"
+              ],
+              "notes": "Not: Yeşil salata içinde mısır, patates, bezelye ve nar ekşisi olmayan, içinde 1 yemek kaşığı zeytinyağı, limon ve sirke eklenmiş.<br/><br/>Not: Ton balığı light tercih edin. Ayçiçek yağı kesinlikle olmasın, zeytinyağlı ise eğer yağını iyice süzün."
+            }
+          ]
+        },
+        {
+          "name": "İkindi",
+          "time_before": "Öğünden 15 dakika önce 1 bardak su içiniz",
+          "options": [
+            {
+              "type": "Seçmeli",
+              "content": [
+                "Aşağıdakilerden biri:",
+                "4 yemek kaşığı yoğurt/süzme yoğurt (200 gram - zerdeçal, zencefil, pulbiber, karabiber) veya",
+                "1 kutu sade/meyveli activia veya",
+                "1 kutu quark veya",
+                "1 su bardağı protein süt (200 ml - pınar protein, içim fit protein, sek protein, danone protein, tazelen whey protein) veya",
+				"1 paket protein bar (uniq2go, züber proteinli var, fellas proteinli bar, metro protein bar, muscle station olabilir) veya",
+                "Pınar protein yoğurt 160 gram veya",
+				"1 su bardağı protein kefir (altınkılıç protein kefir, lifeway protein kefir, biotiful dairy protein kefir olabilir) veya",
+				"30-35 adet çiğ kuruyemiş"
+              ],
+              "notes": "Not: Protein süt veya quarkları isteğe bağlı meyveli olanlarını tercih edebilirsiniz."
+            }
+          ]
+        },
+        {
+          "name": "Akşam",
+          "time_before": "Öğünden 15 dakika önce 1 bardak su içiniz",
+          "options": [
+            {
+              "type": "Standart",
+              "content": [
+                "Yumurtalı protein salatası/omleti",
+				"2 adet tam + 2-3 yumurta akı (sınırsız ak kullanabilirsiniz)",
+				"6-7 yemek kaşığı lor peyniri (2 yemek kaşığı = 25 gram)",
+				"7-8 dilim hindi füme veya çemensiz pastırma",
+				"1 tatlı kaşığı zeytinyağı veya 10 adet siyah/yeşil zeytin",
+				"Kapya biber, dereotu, tere, roka, maydonoz, salatalık, yeşillik vs. ile salata veya omlet hazırlayabilirsiniz."            
+              ],
+              "notes": "Not: Zeytinyağı hakkınızı yumurta salatası üzerine gezdirerek kullanabilirsiniz.<br/><br/>Not: Patates, bezelye, havuç, mısır hariç tüm sebzeler ile omlet yapabilirsiniz. Mantar protein açısından zengindir."
+            }
+          ]
+        },
+        {
+          "name": "Gece",
+          "time_before": "Öğünden 10 dakika önce 2 bardak su içiniz",
+          "options": [
+            {
+              "type": "Standart",
+              "content": [
+                "Bitki çayı"
+              ],
+              "notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

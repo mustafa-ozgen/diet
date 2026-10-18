@@ -1,0 +1,492 @@
+/* ========================================
+   DIYET PROGRAMI - Minimalist Modern Tasarım
+   ======================================== */
+
+:root {
+    --primary-color: #2d5a27;
+    --primary-dark: #1e3e1a;
+    --primary-light: #e8f3e9;
+    --accent-color: #e89c2d;
+    --accent-light: #fdf3e3;
+    --text-main: #1a1a1a;
+    --text-secondary: #5a5a5a;
+    --text-light: #8a8a8a;
+    --bg-body: #fafafa;
+    --bg-card: #ffffff;
+    --bg-meal: #f8f9fa;
+    --border-color: #e0e0e0;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.10);
+    --radius: 12px;
+    --radius-sm: 6px;
+    --transition: all 0.3s ease;
+    --spacing: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* ===== App Container ===== */
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Header ===== */
+.app-header {
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--spacing);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+    background: linear-gradient(135deg, #2d5a27 0%, #1e3e1a 100%);
+    color: #ffffff;
+}
+
+.header-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+}
+
+.app-header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+}
+
+.program-selector {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.program-selector label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.program-selector select {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+/* ===== Main Content ===== */
+.main-content {
+    flex: 1;
+    padding: var(--spacing);
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.diet-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+}
+
+/* ===== Loading State ===== */
+.loading {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* ===== Program Header ===== */
+.program-info {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: var(--spacing);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    margin-bottom: 8px;
+}
+
+.program-info h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.program-info p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+    color: #ffffff;
+    padding: 8px 12px;
+
+/* ===== Meal Card ===== */
+.meal-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: var(--transition);
+    animation: slideIn 0.4s ease forwards;
+    opacity: 0;
+}
+
+.meal-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.meal-header {
+    padding: 16px 16px 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meal-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+
+/* ===== Options ===== */
+.options-group {
+    margin-bottom: 14px;
+}
+
+.options-group:last-child {
+    margin-bottom: 0;
+}
+
+.option-type {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--accent-color);
+    margin-bottom: 6px;
+    padding-left: 2px;
+}
+
+.content-list {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.content-list li {
+    font-size: 0.92rem;
+    color: var(--text-main);
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    padding-left: 24px;
+}
+
+.content-list li:last-child {
+    border-bottom: none;
+}
+
+.content-list li::before {
+    content: "•";
+
+/* ===== Empty State ===== */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-secondary);
+}
+
+.empty-state p {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+/* ===== Footer ===== */
+.app-footer {
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    padding: 12px var(--spacing);
+    font-size: 0.8rem;
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pwa-badge {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 480px) {
+    .app-header {
+        padding: 16px 12px;
+    }
+
+    .app-header h1 {
+        font-size: 1.25rem;
+    }
+
+    .program-selector {
+        gap: 8px;
+    }
+
+    .program-selector select {
+        min-width: 140px;
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+
+    .refresh-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .main-content {
+        padding: 12px;
+    }
+
+    .meal-header {
+        padding: 14px 14px 10px 14px;
+    }
+
+    .meal-name {
+        font-size: 1rem;
+    }
+
+    .meal-content {
+        padding: 10px 14px;
+    }
+
+    .content-list li {
+        font-size: 0.88rem;
+        padding-left: 22px;
+    }
+
+    .program-info {
+        padding: 16px;
+    }
+
+    .program-info h2 {
+        font-size: 1.1rem;
+    }
+}
+
+/* ===== Update Notification ===== */
+.update-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--primary-dark);
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-hover);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.update-toast.show {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ===== Install PWA Prompt ===== */
+.install-prompt {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    box-shadow: var(--shadow-hover);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    gap: 12px;
+    max-width: 90vw;
+}
+
+.install-prompt.show {
+    display: flex;
+}
+
+.install-prompt p {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    flex: 1;
+}
+
+.install-btn {
+    background: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.install-btn:hover {
+    background: var(--primary-dark);
+}
+
+.close-install {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 4px;
+}
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#lastUpdated {
+    font-style: italic;
+}
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 4px;
+    font-size: 1rem;
+}
+
+.notes-box {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent-color);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+.notes-box::before {
+    content: "📝 ";
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.notes-box br {
+    margin-bottom: 4px;
+}
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.meal-time {
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    margin-top: 4px;
+}
+
+.meal-content {
+    padding: 12px 16px;
+}
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    cursor: pointer;
+    outline: none;
+    min-width: 180px;
+}
+
+.program-selector select option {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+.refresh-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.refresh-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+.refresh-btn:active {
+    transform: scale(0.95);
+}
+
+.refreshing {
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
