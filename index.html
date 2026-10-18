@@ -3,40 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#2d5a27">
+    <meta name="theme-color" content="#16a34a">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Diyet Programı">
-    <meta name="description" content="Minimalist ve modern diyet programı takip uygulaması">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Diyet Programım">
+    <meta name="description" content="Günlük diyet programı takip uygulaması">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" sizes="192x192" href="icon-192x192.png">
     <link rel="apple-touch-icon" href="icon-192x192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Diyet Programı</title>
+    <title>Diyet Programım</title>
 </head>
 <body>
-    <div class="app-container">
-        <header class="app-header">
-            <h1>Diyet Programı</h1>
-            <div class="program-selector">
-                <label for="programSelect">Program</label>
-                <select id="programSelect">
-                    <option value="dietprogram1">Diyet Programı 1</option>
-                    <option value="dietprogram2">Diyet Programı 2</option>
-                    <option value="dietprogram3_fatburn">Fat Burn List</option>
-                </select>
-                <button id="refreshBtn" class="refresh-btn" title="Yenile">&#10227;</button>
+    <div class="bg-decor" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="app">
+        <header class="hero">
+            <div class="hero-top">
+                <div class="brand">
+                    <div class="brand-icon">&#129367;</div>
+                    <div>
+                        <h1>Diyet Programım</h1>
+                        <p id="dateLine">Bugünkü planın hazır</p>
+                    </div>
+                </div>
+                <button id="refreshBtn" class="icon-btn" title="Yenile" aria-label="Yenile">&#10227;</button>
             </div>
+            <nav class="program-pills" id="programPills" aria-label="Diyet programları">
+                <button class="pill active" data-program="dietprogram1"><span class="pill-emoji">&#129382;</span><span>Diyet 1</span></button>
+                <button class="pill" data-program="dietprogram2"><span class="pill-emoji">&#9749;</span><span>Diyet 2</span></button>
+                <button class="pill" data-program="dietprogram3_fatburn"><span class="pill-emoji">&#128293;</span><span>Fat Burn</span></button>
+            </nav>
         </header>
-        <main class="main-content">
-            <div class="diet-container" id="dietContainer">
-                <div class="loading">Yükleniyor...</div>
+        <main class="content">
+            <section class="program-hero" id="programHero">
+                <div class="program-hero-text">
+                    <span class="eyebrow">Aktif Program</span>
+                    <h2 id="programName">Yükleniyor...</h2>
+                    <p id="programMeta"></p>
+                </div>
+                <div class="program-hero-badge" id="programBadge">&#129367;</div>
+            </section>
+            <div class="meal-timeline" id="dietContainer">
+                <div class="loading"><div class="spinner"></div><p>Program yükleniyor...</p></div>
             </div>
         </main>
         <footer class="app-footer">
             <span id="lastUpdated">Güncelleniyor...</span>
-            <span class="pwa-badge">PWA Hazır</span>
+            <span class="live-dot"><i></i>Otomatik senkron açık</span>
         </footer>
     </div>
     <script src="script.js"></script>
